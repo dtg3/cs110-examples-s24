@@ -7,10 +7,10 @@ int main()
 
     /*
       An OR condition is True it at least one clause is also True.
-      When x is 50, ++y does not need to be run as it's result is
+      When x is not 50, ++y does not need to be run as it's result is
       irrelevent in the context of the OR condition.
 
-      When X is not 50, the second statement will run incrementing
+      When X is 50, the second statement will run incrementing
       y to 0 (which is considered to be "False").
     */
     if (x != 50 || ++y) {
