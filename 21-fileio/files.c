@@ -49,23 +49,23 @@ The file input.txt must exist.
 
 int main() {
     // Open input.txt in read mode
-    FILE *fp = fopen("input.txt", "r");
+    FILE *unicorn = fopen("input.txt", "r");
 
     // If input.txt does not exist, or if there was some other issue when
     // opening the file (such as insufficient privileges), then fopen() will
     // have returned NULL
-    if (fp == NULL) {
+    if (unicorn == NULL) {
         printf("Could not open input.txt\n");
         return 1;
     }
 
     // Read and print each character in the input file
     int c;
-    while ((c = fgetc(fp)) != EOF) {
+    while ((c = fgetc(unicorn)) != EOF) {
         putchar(c);
     }
 
-    fclose(fp);
+    fclose(unicorn);
 
     // Open output.txt in write mode. If the file already exists, its contents
     // will be overwritten
